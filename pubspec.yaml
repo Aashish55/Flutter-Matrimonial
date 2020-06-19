@@ -54,6 +54,9 @@ flutter:
     - assets/love1.jpg
     - assets/love2.jpg
     - assets/love3.jpg
+    - assets/loveQuote1.jpg
+    - assets/loveQuote2.jpg
+    - assets/loveQuote3.jpg
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

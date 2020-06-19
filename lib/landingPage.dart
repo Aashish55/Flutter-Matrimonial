@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'homepage.dart';
 
 class LandingPage extends StatefulWidget {
   LandingPage({Key key}) : super(key: key);
@@ -32,9 +33,7 @@ class _LandingPageState extends State<LandingPage> {
           showIndicator: true,
           indicatorBgPadding: 7.0,
           images: [
-            AssetImage(
-              'assets/love1.jpg',
-            ),
+            AssetImage('assets/love1.jpg'),
             AssetImage('assets/love2.jpg'),
             AssetImage('assets/love3.jpg'),
           ],
@@ -230,10 +229,11 @@ void _settingModalBottomSheetForLogin(context) {
                             borderRadius: new BorderRadius.circular(15.0),
                           ),
                           onPressed: () {
-                            //               Navigator.push(
-                            // context,
-                            // MaterialPageRoute(builder: (context) => SearchPeoplePage()),
-                            //);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Homepage()),
+                            );
                           },
                           child: Text(
                             "Login",
