@@ -162,6 +162,12 @@ class _HomepageState extends State<Homepage> {
                     recentMessages(),
                     recentMessages(),
                     recentMessages(),
+                    recentMessages(),
+                    recentMessages(),
+                    recentMessages(),
+                    recentMessages(),
+                    recentMessages(),
+                    recentMessages(),
                   ],
                 ),
               ),
@@ -218,12 +224,23 @@ Widget recentMessages() {
     ),
     Positioned(
       bottom: 5.0,
-      right: 2.0,
+      right: 5.0,
       child: Container(
-        width: 15.0,
-        height: 15.0,
-        color: Colors.redAccent,
-      ),
+          width: 15.0,
+          height: 15.0,
+          decoration: new BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.redAccent,
+          ),
+          child: Center(
+            child: Text(
+              "2",
+              style: new TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w800,
+                  fontSize: 12.0),
+            ),
+          )),
     ),
   ]);
 }
