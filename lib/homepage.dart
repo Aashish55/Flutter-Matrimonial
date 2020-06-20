@@ -152,7 +152,18 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
               SizedBox(
-                height:10.0,
+                height: 10.0,
+              ),
+              Container(
+                height: 50.0,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    recentMessages(),
+                    recentMessages(),
+                    recentMessages(),
+                  ],
+                ),
               ),
             ],
           ),
@@ -163,27 +174,56 @@ class _HomepageState extends State<Homepage> {
 
   Widget recentProfiles() {
     return Container(
-      width: 100.0,
+        width: 100.0,
+        margin: EdgeInsets.only(left: 10.0, right: 10.0),
+        child: Material(
+          child: InkWell(
+            onTap: () {
+              print('pressed');
+            },
+            child: Container(
+                child: ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: Image.asset(
+                "assets/girl.jpg",
+                fit: BoxFit.cover,
+              ),
+            )),
+          ),
+        ));
+  }
+}
+
+Widget recentMessages() {
+  return Stack(children: <Widget>[
+    Container(
+      width: 50.0,
       margin: EdgeInsets.only(left: 10.0, right: 10.0),
-      child: FlatButton(
-        padding: EdgeInsets.all(0),
-        shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(20.0),
-        ),
-        onPressed: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //       builder: (context) => MyHomePage()),
-          // );
-        },
-        child: Image.asset(
-          'assets/girl.jpg',
-          fit: BoxFit.cover,
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.width,
+      child: Material(
+        //color: Colors.redAccent,
+        child: InkWell(
+          onTap: () {
+            print('pressed');
+          },
+          child: Container(
+              child: ClipRRect(
+            borderRadius: BorderRadius.circular(25.0),
+            child: Image.asset(
+              "assets/girl.jpg",
+              fit: BoxFit.cover,
+            ),
+          )),
         ),
       ),
-    );
-  }
+    ),
+    Positioned(
+      bottom: 5.0,
+      right: 2.0,
+      child: Container(
+        width: 15.0,
+        height: 15.0,
+        color: Colors.redAccent,
+      ),
+    ),
+  ]);
 }
