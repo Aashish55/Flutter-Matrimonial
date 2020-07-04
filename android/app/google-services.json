@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "418100462550",
+    "firebase_url": "https://gathabandhan-b77fe.firebaseio.com",
+    "project_id": "gathabandhan-b77fe",
+    "storage_bucket": "gathabandhan-b77fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418100462550:android:80cfbe80f1439e667e9a77",
+        "android_client_info": {
+          "package_name": "com.resofttech.gathabandhan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418100462550-gt3rh42q9tqnemak54umtvleg1o2fenp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMvHVZh5GCS6wv-3y3FqA6_wPaepBAjCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418100462550-gt3rh42q9tqnemak54umtvleg1o2fenp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

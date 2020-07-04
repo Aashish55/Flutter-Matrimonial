@@ -29,7 +29,7 @@ class _SearchPeoplePageState extends State<SearchPeoplePage> {
                 borderRadius: BorderRadius.circular(15.0),
               ),
               child: Container(
-                height: 265.0,
+                height: 270.0,
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Row(
@@ -183,9 +183,11 @@ class _SearchPeoplePageState extends State<SearchPeoplePage> {
                                         side: BorderSide(
                                             color: Colors.redAccent)),
                                     onPressed: () {
-                                                      Navigator.push(
+                                      Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => OthersProfile()),
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                OthersProfile()),
                                       );
                                     },
                                     child: Text(
@@ -211,7 +213,10 @@ class _SearchPeoplePageState extends State<SearchPeoplePage> {
                                             color: Colors.redAccent)),
                                     color: Colors.redAccent,
                                     onPressed: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Profile()));
                                       //                 Navigator.push(
                                       //   context,
                                       //   MaterialPageRoute(builder: (context) => SearchPeoplePage()),
@@ -235,64 +240,63 @@ class _SearchPeoplePageState extends State<SearchPeoplePage> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 SizedBox(
-                                  height:35.0,
-                                  width:35.0,
+                                  height: 35.0,
+                                  width: 35.0,
                                   child: FlatButton(
-                                    padding: EdgeInsets.all(0),
-                                    shape: new RoundedRectangleBorder(
+                                      padding: EdgeInsets.all(0),
+                                      shape: new RoundedRectangleBorder(
                                         borderRadius:
                                             new BorderRadius.circular(10.0),
-                                        ),
-                                    onPressed: () {
-                                      //                 Navigator.push(
-                                      //   context,
-                                      //   MaterialPageRoute(builder: (context) => SearchPeoplePage()),
-                                      // );
-                                    },
-                                    child: Image.asset("assets/facebook.png")
-                                  ),
+                                      ),
+                                      onPressed: () {
+                                        //                 Navigator.push(
+                                        //   context,
+                                        //   MaterialPageRoute(builder: (context) => SearchPeoplePage()),
+                                        // );
+                                      },
+                                      child:
+                                          Image.asset("assets/facebook.png")),
                                 ),
                                 SizedBox(
                                   width: 5.0,
                                 ),
                                 SizedBox(
-                                  height:30.0,
-                                  width:30.0,
+                                  height: 30.0,
+                                  width: 30.0,
                                   child: FlatButton(
-                                    padding: EdgeInsets.all(0),
-                                    shape: new RoundedRectangleBorder(
+                                      padding: EdgeInsets.all(0),
+                                      shape: new RoundedRectangleBorder(
                                         borderRadius:
                                             new BorderRadius.circular(10.0),
-                                        ),
-                                    onPressed: () {
-                                      //                 Navigator.push(
-                                      //   context,
-                                      //   MaterialPageRoute(builder: (context) => SearchPeoplePage()),
-                                      // );
-                                    },
-                                    child: Image.asset("assets/instagram.png")
-                                  ),
+                                      ),
+                                      onPressed: () {
+                                        //                 Navigator.push(
+                                        //   context,
+                                        //   MaterialPageRoute(builder: (context) => SearchPeoplePage()),
+                                        // );
+                                      },
+                                      child:
+                                          Image.asset("assets/instagram.png")),
                                 ),
                                 SizedBox(
                                   width: 5.0,
                                 ),
                                 SizedBox(
-                                  height:35.0,
-                                  width:35.0,
+                                  height: 35.0,
+                                  width: 35.0,
                                   child: FlatButton(
-                                    padding: EdgeInsets.all(0),
-                                    shape: new RoundedRectangleBorder(
+                                      padding: EdgeInsets.all(0),
+                                      shape: new RoundedRectangleBorder(
                                         borderRadius:
                                             new BorderRadius.circular(10.0),
-                                        ),
-                                    onPressed: () {
-                                      //                 Navigator.push(
-                                      //   context,
-                                      //   MaterialPageRoute(builder: (context) => SearchPeoplePage()),
-                                      // );
-                                    },
-                                    child: Image.asset("assets/twitter.png")
-                                  ),
+                                      ),
+                                      onPressed: () {
+                                        //                 Navigator.push(
+                                        //   context,
+                                        //   MaterialPageRoute(builder: (context) => SearchPeoplePage()),
+                                        // );
+                                      },
+                                      child: Image.asset("assets/twitter.png")),
                                 ),
                               ],
                             )
