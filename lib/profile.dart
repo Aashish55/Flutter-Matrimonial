@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'profileDetailsForm.dart';
 
 class Profile extends StatefulWidget {
   Profile({Key key}) : super(key: key);
@@ -411,7 +412,9 @@ class _ProfileState extends State<Profile> {
                 // width: MediaQuery.of(context).size.width,
                 child: FlatButton(
                   color: Colors.redAccent,
-                  onPressed: () {},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileDetailsForm()));
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
