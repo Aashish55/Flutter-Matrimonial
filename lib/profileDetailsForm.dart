@@ -23,12 +23,67 @@ class _ProfileDetailsFormState extends State<ProfileDetailsForm> {
               ),
               label('Age'),
               inputField('e.g: 24'),
+
               label('Date of Birth'),
               inputField('15-May-1995'),
+              
               label('Marital Status'),
               inputField('Never Married'),
+              
               label('Height'),
               inputField('e.g: 5\'11\" '),
+              
+              label('Body Weight'),
+              inputField('In KG'),
+              
+              label('Grew Up In'),
+              inputField('Nepal'),
+              
+              label('Diet'),
+              inputField('Non-Veg'),
+              
+              label('Zodiac Sign'),
+              inputField('Pisces'),
+
+              label('Blood Group'),
+              inputField('B+ '),
+              
+              label('Health Issues'),
+              inputField('None'),
+              
+              label('Disability'),
+              inputField('None'),
+              
+              label('Attracted To'),
+              inputField('Women'),
+              
+              Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 40.0,
+                        width: MediaQuery.of(context).size.width / 2,
+                        child: FlatButton(
+                          padding: EdgeInsets.all(0),
+                          color: Colors.redAccent.withAlpha(200),
+                          splashColor: Colors.white,
+                          shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(15.0),
+                          ),
+                          onPressed: () {
+                            
+                          },
+                          child: Text(
+                            "Save",
+                            style: new TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                      ),
+                    ]),
+
             ],
           ),
         ),
