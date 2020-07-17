@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gathabandhan/authentication/authentication.dart';
 import 'package:gathabandhan/bloc_delegate.dart';
+import 'package:gathabandhan/homePage.dart';
 import 'package:gathabandhan/landingPage.dart';
 import 'package:gathabandhan/login_bloc/login.dart';
 import 'package:gathabandhan/login_bloc/signup_page.dart';
@@ -53,19 +54,26 @@ class _App extends State<App> {
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
           if (state is AuthenticationUninitialized) {
-            return LoginPage(userRepository: widget.userRepository);
+            return LoginPage(
+              userRepository: widget.userRepository,
+              first: false,
+            );
           }
           if (state is AuthenticationAuthenticated) {
-            return SearchPeoplePage();
+            return Homepage();
           }
           if (state is AuthenticationAuthenticate) {
-            return SearchPeoplePage();
+            return Homepage();
           }
           if (state is AuthenticationSignUp) {
             return SignUpPage(userRepository: widget.userRepository);
           }
           if (state is AuthenticationUnauthenticated) {
-            return LoginPage(userRepository: widget.userRepository);
+            print("object");
+            return LoginPage(
+              userRepository: widget.userRepository,
+              first: true,
+            );
           }
           if (state is AuthenticationLoading) {
             return Center(

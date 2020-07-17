@@ -34,6 +34,7 @@ dependencies:
   google_sign_in:
   http:
   flutter_html:
+  scroll_snap_list: ^0.4.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,11 @@ flutter:
     - assets/love1.jpg
     - assets/love2.jpg
     - assets/love3.jpg
+    - assets/loveQuote1.jpg
+    - assets/loveQuote2.jpg
+    - assets/loveQuote3.jpg
+    - assets/bg.png
+    - assets/banner.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

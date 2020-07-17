@@ -11,7 +11,6 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 class UserRepository {
   Future<void> deleteToken() async {
     _auth.signOut();
-    GoogleSignIn().signOut();
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.remove('token');
     return;
@@ -32,7 +31,7 @@ class UserRepository {
       http.Response response;
 
       response = await http.post(
-        'https://24b2b0cac49b.ngrok.io/accounts/api/auth-token/',
+        'https://stg.gathabandhan.com/accounts/api/auth-token/',
         body: json.encode(data),
         headers: {'Content-Type': 'application/json'},
       );
@@ -56,7 +55,15 @@ class UserRepository {
     try {
       await _auth
           .createUserWithEmailAndPassword(email: email, password: password)
+          .then((value) => print(value))
           .catchError((onError) => throw onError.code);
+      FirebaseUser user = await _auth.currentUser();
+
+      UserUpdateInfo updateInfo = UserUpdateInfo();
+
+      updateInfo.displayName = "Amrit Acharya";
+      user.updateProfile(updateInfo);
+      print('USERNAME IS: ${user.displayName}');
     } catch (e) {
       throw (e.toString());
     }

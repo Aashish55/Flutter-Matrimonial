@@ -31,7 +31,7 @@ class AuthenticationBloc
     }
     if (event is SignedUp) {
       yield AuthenticationLoading();
-      yield AuthenticationLogin();
+      yield AuthenticationUnauthenticated();
     }
     if (event is SignUp) {
       yield AuthenticationLoading();
@@ -39,12 +39,9 @@ class AuthenticationBloc
     }
     if (event is Login) {
       yield AuthenticationLoading();
-      yield AuthenticationLogin();
-    }
-    if (event is ReturnStart) {
-      yield AuthenticationLoading();
       yield AuthenticationUnauthenticated();
     }
+
     if (event is LoggedIn) {
       yield AuthenticationLoading();
       yield AuthenticationAuthenticate();

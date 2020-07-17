@@ -7,8 +7,9 @@ import 'package:gathabandhan/login_bloc/login.dart';
 
 class LoginPage extends StatefulWidget {
   final UserRepository userRepository;
+  final bool first;
 
-  LoginPage({Key key, @required this.userRepository})
+  LoginPage({Key key, @required this.userRepository, this.first})
       : assert(userRepository != null),
         super(key: key);
 
@@ -45,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
       child: LandingPage(
         loginBloc: _loginBloc,
-        loginPressed: true,
+        loginPressed: widget.first ? true : false,
         authenticationBloc: _authenticationBloc,
         signUpPressed: false,
       ),
